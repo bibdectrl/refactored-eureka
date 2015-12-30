@@ -46,3 +46,8 @@ function Vec2:sub(v)
   self.x = self.x - v.x
   self.y = self.y - v.y
 end
+
+function Vec2:mult(scalar)
+  self.x = self.x * scalar
+  self.y = self.y * scalar
+end

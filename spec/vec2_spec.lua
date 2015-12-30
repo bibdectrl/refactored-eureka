@@ -37,6 +37,12 @@ describe("a vector", function()
     assert.are.equal(vecc.y, veca.y * 10)
   end)
 
+  it("should support scalar multiplication via mutation", function()
+    veca:mult(0)
+    assert.are.equal(veca.x, 0)
+    assert.are.equal(veca.y, 0)
+  end)
+
   it("should be able to calculate its magnitude", function()
     local mag = veca:magnitude()
     assert.are.equal(mag, math.sqrt((veca.x * veca.x) + (veca.y * veca.y)))
